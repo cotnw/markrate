@@ -28,4 +28,12 @@ router.post('/tweet', async(req, res) => {
     }
 });
 
+router.get('/post', (req, res) => {
+    res.render('verify/post')
+})
+
+router.get('/tweet', (req, res) => {
+    res.render('verify/tweet')
+})
+
 module.exports = router

@@ -17,8 +17,16 @@ router.get('/setup', (req, res) => {
     res.render('setup')
 });
 
-router.get('/dashboard', (req, res) => {
-    res.render('dashboard')
+router.get('/discover', (req, res) => {
+    res.render('discover')
 });
+
+router.get('/place', (req, res) => {
+    res.render('place')
+})
+
+router.get('/leaderboard', (req, res) => {
+    res.render('leaderboard')
+})
 
 module.exports = router

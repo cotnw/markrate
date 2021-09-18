@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* navbar */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+    height: 3.5vw;
+    padding-top: 1.5vw;
+}
+
+.current-location {
+    margin-top: 0.2vw;
+    color: #747474;
+    font-family: 'Poppins';
+    margin-left: 3vw;
+}
+
+.current-location i {
+    font-size: 1.1vw;
+}
+
+nav .logo img {
+    margin-left: 10vw;
+    width: 8vw;
+    height: auto;
+}
+
+.right {
+    position: absolute;
+    margin-top: 0.2vw;
+    right: 0;
+    margin-right: 10vw;
+}
+
+.right a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: #747474;
+    font-size: 1vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+}
+
+#active {
+    color: #FF6600;
+}
+
+/* navbar ends */
+
+main {
+    margin-top: 7vw;
+    font-family: 'Poppins';
+    width: 66vw;
+    margin-left: 15vw;
+    /* background: black; */
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-left {
+    width: 60%;
+    height: 40vw;
+    border-radius: 16px;
+}
+
+.go-back {
+    margin-top: 0.5vw;
+    font-size: 0.9vw;
+    color: #747474;
+    margin-left: 1.5vw;
+}
+
+.main-left h1 {
+    margin-left: 1.5vw;
+    color: #E95B5B;
+    font-size: 1.5vw;
+    margin-top: 2vw;
+}
+
+.main-left .logged-in {
+    margin-top: -0.5vw;
+    color: #747474;
+    font-size: 0.8vw;
+    margin-left: 1.5vw;
+}
+
+.main-left .label {
+    margin-left: 1.5vw;
+    margin-top: 2vw;
+}
+
+.main-left .input {
+    margin: 0;
+    width: 24vw;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    padding-left: 1vw;
+    height: 2vw;
+    padding-top: 0.5vw;
+    margin-left: 1.5vw;
+}
+
+.main-left .input i {
+    color: #C4C4C4;
+}
+
+.main-left .input input {
+    font-size: 0.9vw;
+    padding-left: 0.6vw;
+    font-family: 'Poppins';
+    border: none;
+    width: 22vw;
+}
+
+.main-left button {
+    font-family: 'Poppins';
+    width: 25vw;
+    background: #FFFFFF;
+    border: 1px solid #E95B5B;
+    border-radius: 5px;
+    height: 2.5vw;
+    color: #E95B5B;
+    font-size: 0.9vw;
+    /* font-weight: bold; */
+    text-align: center;
+    margin-bottom: 1vw;
+    margin-left: 1.5vw;
+    margin-top: 1.5vw;
+}
+
+.main-left button:hover {
+    background: #E95B5B;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#twitter-button {
+    border: 1px solid #00ACEE;
+    color: #00ACEE;
+}
+
+#twitter-button:hover {
+    background: #00ACEE;
+    color: white;
+}
+
+.main-left .input input:focus {
+    outline: none;
+}
+
+.main-right {
+    width: 36%;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    height: 30vw;
+    margin-left: 4%;    
+}
+
+.main-right h1 {
+    margin-left: 1.5vw;
+    margin-top: 1.5vw;
+}
+
+.main-right p {
+    margin-left: 1.5vw;
+    font-size: 0.8vw;
+    color: #747474;
+    margin-top: -0.5vw;
+    width: 19vw;
+}
+
+.main-right .header {
+    font-weight:bolder;
+    font-size: 0.8vw;
+    color: black;
+    margin-top: 1vw;
+}
+
+.main-right button {
+    font-family: 'Poppins';
+    width: 20vw;
+    background: #FFFFFF;
+    border: 1px solid #FF6600;
+    border-radius: 5px;
+    height: 2.2vw;
+    color: #FF6600;
+    font-size: 0.9vw;
+    /* font-weight: bold; */
+    text-align: center;
+    margin-bottom: 1vw;
+    margin-left: 1.5vw;
+}
+
+
+
+.main-right .info {
+    width: 20.5vw;
+    height: auto;
+    /* background: #FF6600; */
+    margin-left: 1.5vw;
+    margin-bottom: 1vw;
+    margin-top: -0.5vw;
+}
