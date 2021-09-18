@@ -21,12 +21,29 @@ router.post('/tweet', async(req, res) => {
             let date = new Date(tweet.created_at)
             if (tweet.text.includes(req.body.localBusiness) && tweet.user.id_str === user.connections.twitter.userId && date > yesterday) {
                 res.json({ success: true })
+            } else {
+                res.json({ success: false })
             }
         })
     } else {
         res.json({ success: false, message: 'User not found' })
     }
 });
+
+router.post('/post', async(req, res) => {
+    let user = await User.findOne({ access_token: req.body.access_token })
+    if (user) {
+        let postDetails = await axios.get(`https://api.instagram.com/oembed/?url=${postLink}`)
+        if (postDetails.data.title.includes(req.body.localBusiness) && postDetails.data.author_id == user.connections.instagram.userId) {
+            res.json({ success: true })
+        } else {
+            res.json({ success: false })
+        }
+    } else {
+        res.json({ success: false, message: 'User not found' })
+    }
+})
+
 
 router.get('/post', (req, res) => {
     res.render('verify/post')

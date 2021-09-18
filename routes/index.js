@@ -1,4 +1,5 @@
 const express = require('express')
+const User = require('../models/User')
 const router = express.Router()
 
 router.get('/', (req, res) => {
@@ -25,8 +26,26 @@ router.get('/place', (req, res) => {
     res.render('place')
 })
 
-router.get('/leaderboard', (req, res) => {
-    res.render('leaderboard')
+router.get('/leaderboard', async(req, res) => {
+    let users = await User.find().sort({ markrates: -1 })
+    let response = []
+    users.forEach(user => {
+        let object = {}
+        object.name = user.name
+        object.markrates = user.markrates
+        response.push(object)
+    })
+    res.render('leaderboard', response)
+})
+
+router.get('/profile', async(req, res) => {
+    let user = await User.findOne({ access_token: req.query.access_token })
+    res.render('profile', {
+        name: user.name,
+        email: user.email,
+        markrates: user.markrates,
+        connections: user.connections
+    })
 })
 
 module.exports = router
