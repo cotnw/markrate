@@ -26,6 +26,7 @@
         "login-with-twitter": "^1.2.4",
         "mongoose": "^5.13.5",
         "nodemon": "^2.0.12",
-        "querystring": "^0.2.1"
+        "querystring": "^0.2.1",
+        "twitter": "^1.7.1"
     }
 }
