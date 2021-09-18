@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.left {
+    width: 50%;
+    height: 101vh;
+    margin-top: -1vh;
+    margin-left: -1vh;
+    background-image: url('https://cdn.discordapp.com/attachments/870661503487991869/871016169874800700/unknown.png');
+    background-size: cover;
+}
+
+.right {
+    width: 50%;
+    height: 101vh;
+    margin-top: 5vh;
+    margin-left: -5vh;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 8vw;
+}
+
+nav .logo img {
+    width: 12vw;
+    height: auto;
+    margin-right: 7vw;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: #FF6600;
+    font-size: 1.1vw;
+    margin-top: 0.7vw;
+    margin-left: 2vw;
+}
+
+main {
+    font-family: 'Poppins';
+    width: 26vw;
+    margin-top: 4vw;
+    margin-left: 16vw;
+    /* background-color: #FF6600; */
+}
+
+main h1 {
+    font-size: 2.5vw;
+    font-weight: 600;
+}
+
+main p {
+    font-size: 0.8vw;
+    text-align: center;
+    margin-top: -1.5vw;
+}
+
+.location {
+    margin-top: 2vw;
+}
+
+.location p {
+    font-size: 1.1vw;
+    text-align: left;
+    margin-top: 0vw;
+}
+
+.location input {
+    width: 90%;
+    height: 2vw;
+    background: transparent;
+    border: 2px solid #eeeeee;
+    border-radius: 5px;
+    margin-top: -7vw;
+    font-family: 'Poppins';
+    font-size: 0.8vw;
+    color: #111;
+    padding-left: 0.8vw;
+}
+
+.location input:focus {
+    outline: none;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5vw;
+}
+
+.namelogo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.7vw;
+}
+
+.namelogo i {
+    width: 0.5vw;
+    height: auto;
+    color: #747474;
+    font-size: 1.3vw;
+}
+
+.namelogo p {
+    font-size: 1vw;
+    color: #747474;
+    margin-left: 2vw;
+    font-family: 'Poppins';
+    margin-top: -0.2vw;
+}
+
+.social button {
+    height: 2.5vw;
+    width: 8vw;
+    background: transparent;
+    border: 1px solid #747474;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 0.9vw;
+    margin-left:  9vw;
+}
+
+.social button:hover {
+    background: linear-gradient(90.44deg, #FF6600 2.87%, #FDAB01 108.08%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#connected {
+    background: linear-gradient(90.44deg, #FF6600 2.87%, #FDAB01 108.08%);
+    color: white;
+    border: none;
+}
+
+.finish {
+    font-family: 'Poppins';
+    width: 96%;
+    border: none;
+    height: 2.7vw;
+    border-radius: 5px;
+    margin-top: 1vw;
+    background: linear-gradient(90.44deg, #FF6600 2.87%, #FDAB01 108.08%);
+    color: white;
+    font-size: 1.1vw;
+    text-align: center;
+}
+
+.finish:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.left {
+    width: 50%;
+    height: 101vh;
+    margin-top: -1vh;
+    margin-left: -1vh;
+    background-image: url('https://cdn.discordapp.com/attachments/870661503487991869/870993588744495104/unknown.png');
+    background-size: cover;
+}
+
+.right {
+    width: 50%;
+    height: 101vh;
+    margin-top: 5vh;
+    margin-left: -5vh;
+    background-image: url('https://cdn.discordapp.com/attachments/870661503487991869/870994294402609152/unknown.png');
+    background-size: cover;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 8vw;
+}
+
+nav .logo img {
+    width: 12vw;
+    height: auto;
+    margin-right: 7vw;
+}
+
+nav a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: #FF6600;
+    font-size: 1.1vw;
+    margin-top: 0.7vw;
+    margin-left: 2vw;
+}
+
+main {
+    font-family: 'Poppins';
+    width: 20vw;
+    margin-top: 14vw;
+    margin-left: 18vw;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2vw;
+    font-weight: 600;
+}
+
+main p {
+    font-size: 0.7vw;
+    text-align: center;
+    margin-top: -1vw;
+}
+
+button {
+    font-family: 'Poppins';
+    width: 95%;
+    border: 1px solid #FF6600;
+    height: 2.7vw;
+    border-radius: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    background: transparent;
+    margin-left: 0.5vw;
+    margin-top: 2vw;
+    color: #FF6600;
+}
+
+button:hover {
+    background: #FF6600;
+    color: #FFF;
+    cursor: pointer;
+}
+
+button img {
+    height: 2vw;
+    width: auto;
+    margin-top: 0.2vw;
+    margin-left: 3.2vw;
+}
+
+button p {
+    font-size: 0.9vw;
+    margin-top: 0.5vw;
+    margin-left: 0.3vw;
+}
