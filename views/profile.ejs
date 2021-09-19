@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="/images/markrate-small.png" sizes="16x16" type="image/png">
+    <title>Markrate | Profile</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://cdn.discordapp.com/attachments/870661503487991869/871308102329307146/unknown.png">
+        </div>
+        <span class="current-location"><i class="fas fa-map-marker-alt"></i>&nbsp; Gurugram, Haryana</span>
+        <div class="right">
+            <a href="/discover"><i class="far fa-compass"></i>&nbsp; Discover</a>
+            <a href="/leaderboard"><i class="fas fa-trophy"></i>&nbsp; Leaderboard</a>
+            <a href="/profile" id="active"><i class="far fa-user"></i>&nbsp; Account</a>
+        </div>
+    </nav>
+    <main>
+        <div class="main-left">
+            <h1>Your Markrate Account</h1>
+            <p>Check out your profile information, connected socials and markrates earned.</p>
+            <h3>Display Name</h3>
+            <div class="input">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Anshul Saha" disabled/>
+            </div>
+            <h3>Email Address</h3>
+            <div class="input">
+                <i class="fas fa-envelope"></i>
+                <input type="text" placeholder="anshulsaha15@gmail.com" disabled/>
+            </div>
+            <h3>Saved Location</h3>
+            <div class="input">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" placeholder="Gurugram, Haryana" disabled/>
+            </div>
+            <h3>Socials</h3>
+            <div class="social">
+                <div class="namelogo">
+                    <i class="fab fa-instagram"></i>
+                    <p>Instagram</p>
+                </div>
+                <button class="insta-connect-button" id="connected">Connect</button>
+            </div>
+            <div class="social">
+                <div class="namelogo">
+                    <i class="fab fa-twitter"></i>
+                    <p>Twitter</p>
+                </div>
+                <button class="twitter-connect-button" style="margin-left: 10.8vw;">Connect</button>
+            </div>
+            <div class="social">
+                <div class="namelogo">
+                    <i class="fab fa-facebook"></i>
+                    <p>Facebook</p>
+                </div>
+                <button class="facebook-connect-button" style="margin-left: 9.2vw;">Connect</button>
+            </div>
+            <div class="social">
+                <div class="namelogo">
+                    <i class="fab fa-snapchat"></i>
+                    <p>Snapchat</p>
+                </div>
+                <button class="snapchat-connect-button" style="margin-left: 9.2vw;">Connect</button>
+            </div>
+        </div>
+        <div class="main-right">
+            <button class="logout-button">Logout</button>
+            <h3>Your statistics</h3>
+            <div class="input">
+                <p><span style="font-weight: bold;">Markrates earned</span> &nbsp; <img src="/images/markrate-small.png"></img> &nbsp; <span style="font-weight: bold;">54</span> <button id="connected">Redeem</button></p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

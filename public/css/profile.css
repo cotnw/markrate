@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* navbar */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.15);
+    height: 3.5vw;
+    padding-top: 1.5vw;
+}
+
+.current-location {
+    margin-top: 0.2vw;
+    color: #747474;
+    font-family: 'Poppins';
+    margin-left: 3vw;
+}
+
+.current-location i {
+    font-size: 1.1vw;
+}
+
+nav .logo img {
+    margin-left: 10vw;
+    width: 8vw;
+    height: auto;
+}
+
+.right {
+    position: absolute;
+    margin-top: 0.2vw;
+    right: 0;
+    margin-right: 10vw;
+}
+
+.right a {
+    text-decoration: none;
+    font-family: 'Poppins';
+    color: #747474;
+    font-size: 1vw;
+    margin-top: 2vw;
+    margin-left: 2vw;
+}
+
+#active {
+    color: #FF6600;
+}
+
+/* navbar ends */
+
+main {
+    margin-top: 7vw;
+    font-family: 'Poppins';
+    width: 66vw;
+    margin-left: 15vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-left {
+    width: 60%;
+    height: 40vw;
+}
+
+.main-left p {
+    margin-top: -1vw;
+    font-size: 0.9vw;
+    color: #747474;
+}
+
+.main-left h3 {
+    font-size: 1vw;
+    font-weight: bolder;
+    margin-top: 1.5vw;
+}
+
+.main-left .input {
+    margin: 0;
+    width: 24vw;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    border-radius: 5px;
+    padding-left: 1vw;
+    height: 2vw;
+    padding-top: 0.5vw;
+    margin-top: -0.5vw;
+}
+
+.main-left .input i {
+    color: #C4C4C4;
+}
+
+.main-left .input input {
+    font-size: 0.9vw;
+    padding-left: 0.6vw;
+    font-family: 'Poppins';
+    border: none;
+    background: #FFFFFF;
+    width: 22vw;
+}
+
+.main-left .input input:focus {
+    outline: none;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0.5vw;
+}
+
+.namelogo {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 0.7vw;
+}
+
+.namelogo i {
+    width: 0.5vw;
+    height: auto;
+    color: #747474;
+    font-size: 1.3vw;
+}
+
+.namelogo p {
+    font-size: 1vw;
+    color: #747474;
+    margin-left: 2vw;
+    font-family: 'Poppins';
+    margin-top: -0.2vw;
+}
+
+.social button {
+    height: 2.5vw;
+    width: 8vw;
+    background: transparent;
+    border: 1px solid #747474;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 0.9vw;
+    margin-left:  9vw;
+}
+
+.social button:hover {
+    background: linear-gradient(90.44deg, #FF6600 2.87%, #FDAB01 108.08%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#connected {
+    background: linear-gradient(90.44deg, #FF6600 2.87%, #FDAB01 108.08%);
+    color: white;
+    border: none;
+}
+
+.main-right {
+    width: 36%;
+    margin-left: 4%;
+}
+
+.main-right .logout-button {
+    font-family: 'Poppins';
+    width: 7vw;
+    background: #FFFFFF;
+    border: 1px solid #DE3939;
+    border-radius: 5px;
+    height: 2.2vw;
+    color: #DE3939;
+    font-size: 0.9vw;
+    /* font-weight: bold; */
+    text-align: center;
+    margin-top: 2vw;
+    margin-left: 14vw;
+    margin-bottom: 0.5vw;
+}
+
+.main-right .logout-button:hover {
+    background: #DE3939;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.main-right h3 {
+    font-size: 1vw;
+    font-weight: bolder;
+    margin-top: 1.9vw;
+    margin-left: -10vw;
+}
+
+.main-right .input {
+    margin: 0;
+    width: 30vw;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border-radius: 5px;
+    padding-left: 1vw;
+    height: 4vw;
+    padding-top: 0.5vw;
+    margin-top: -0.55vw;
+    margin-left: -10vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-right .input {
+    font-size: 1.2vw;
+    color: #FF6600;
+}
+
+.main-right .input img {
+    width: auto;
+    height: 1.3vw;
+    margin-top: 1.2vw;
+}
+
+.main-right .input p {
+    margin-top: -0.4vw;
+}
+
+.main-right button {
+    height: 2.5vw;
+    width: 7vw;
+    background: transparent;
+    border: 1px solid #747474;
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-size: 0.9vw;
+    margin-left:  6vw;
+}
+
+.main-right button:hover {
+    background: linear-gradient(90.44deg, #FF6600 2.87%, #FDAB01 108.08%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -94,3 +94,37 @@ main .input input {
 main .input input:focus {
     outline: none;
 }
+
+.initial-table {
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(90.44deg, #FF6600 2.87%, #FDAB01 108.08%);
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    margin-top: 2vw;
+}
+
+.initial-table th {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: bold;
+    color: white
+}
+
+.second-table {
+    height: 50px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.second-table a {
+    color: black;
+}
+
+.second-table th {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: normal;
+    color: black;
+    margin-bottom: 20px;
+}

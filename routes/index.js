@@ -26,8 +26,8 @@ router.get('/place', (req, res) => {
     res.render('place')
 })
 
-router.get('/leaderboard', async(req, res) => {
-    let users = await User.find().sort({ markrates: -1 })
+router.get('/leaderboard', async (req, res) => {
+    let users = await User.find({}).sort({ markrates: -1 })
     let response = []
     users.forEach(user => {
         let object = {}
@@ -38,14 +38,15 @@ router.get('/leaderboard', async(req, res) => {
     res.render('leaderboard', response)
 })
 
-router.get('/profile', async(req, res) => {
-    let user = await User.findOne({ access_token: req.query.access_token })
-    res.render('profile', {
-        name: user.name,
-        email: user.email,
-        markrates: user.markrates,
-        connections: user.connections
-    })
+router.get('/profile', async (req, res) => {
+    // let user = await User.findOne({ access_token: req.query.access_token })
+    // res.render('profile', {
+    //     name: user.name,
+    //     email: user.email,
+    //     markrates: user.markrates,
+    //     connections: user.connections
+    // })
+    res.render('profile')
 })
 
 module.exports = router
