@@ -107,7 +107,6 @@ router.get('/twitter/callback', async(req, res) => {
         console.log(accessTokenForTwitter)
         let findUser = await User.findOne({ access_token: accessTokenForTwitter })
         console.log(findUser)
-        let findUser = User.findOne({ access_token: accessTokenForTwitter })
         findUser.connections.twitter = {
             access_token: user.userToken,
             user_id: user.userId,

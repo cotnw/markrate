@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="/css/leaderboard.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="icon" href="/images/markrate-small.png" sizes="16x16" type="image/png">
     <title>Markrate | Leaderboard</title>
 </head>
+
 <body>
     <nav>
         <div class="logo">
@@ -32,27 +35,23 @@
                 <th style="width: 28%;">Markrates earned</th>
             </tr>
         </table>
-        <table class="second-table">
-            <tr>
-                <th style="width: 17%;">1</th>
-                <th style="width: 37%;"><a href="https://twitter.com/${user.username}" target="_blank" style="text-decoration: none;">Anshul Saha<a></th>
-                <th style="width: 20%;">30</th>
-            </tr>
-        </table>
-        <table class="second-table">
-            <tr>
-                <th style="width: 17%;">2</th>
-                <th style="width: 37%;"><a href="https://twitter.com/${user.username}" target="_blank" style="text-decoration: none;">Anshul Saha<a></th>
-                <th style="width: 20%;">30</th>
-            </tr>
-        </table>
-        <table class="second-table">
-            <tr>
-                <th style="width: 17%;">3</th>
-                <th style="width: 37%;"><a href="https://twitter.com/${user.username}" target="_blank" style="text-decoration: none;">Anshul Saha<a></th>
-                <th style="width: 20%;">30</th>
-            </tr>
-        </table>
+        <% for (let i = 0; i < response.length; i++) { %>
+            <table class="second-table">
+                <tr>
+                    <th style="width: 17%;">
+                        <%= i+1 %>
+                    </th>
+                    <th style="width: 37%;">
+                        <a href="https://twitter.com/${user.username}" target="_blank" style="text-decoration: none;">
+                            <%= response[i].name %>
+                                <a></th>
+                    <th style="width: 20%;">
+                        <%= response[i].markrates %>
+                    </th>
+                </tr>
+            </table>
+            <% } %>
     </main>
 </body>
+
 </html>
