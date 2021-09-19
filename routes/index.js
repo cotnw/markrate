@@ -70,7 +70,6 @@ router.get('/leaderboard', async(req, res) => {
         response.push(object)
     })
     res.render('leaderboard', { response: response })
-<<<<<<< HEAD
 })
 
 router.get('/profile', async(req, res) => {
@@ -81,13 +80,6 @@ router.get('/profile/data', async(req, res) => {
     const accessToken = req.query.access_token
     const user = await User.findOne({ access_token: accessToken })
     res.json({
-=======
-})
-
-router.get('/profile', async(req, res) => {
-    let user = await User.findOne({ access_token: req.query.access_token })
-    res.render('profile', {
->>>>>>> 7f1288843b8a8946b2305e5010139a7c0de98493
         name: user.name,
         email: user.email,
         markrates: user.markrates,
