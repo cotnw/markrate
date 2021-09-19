@@ -19,9 +19,9 @@ router.get('/setup', (req, res) => {
     res.render('setup')
 });
 
-router.get('/discover', async (req, res) => {
+router.get('/discover', async(req, res) => {
     const user = await User.findOne({ access_token: req.query.access_token })
-    if(!user) {
+    if (!user) {
         res.render('discover')
     }
     // const url = `https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=${user.coords}&radius=10000&type=restaurant&key=${process.env.GOOGLE_MAPS_KEY}`
@@ -42,7 +42,7 @@ router.get('/place', (req, res) => {
     res.render('place')
 })
 
-router.get('/leaderboard', async (req, res) => {
+router.get('/leaderboard', async(req, res) => {
     let users = await User.find({}).sort({ markrates: -1 })
     let response = []
     users.forEach(user => {
@@ -51,10 +51,10 @@ router.get('/leaderboard', async (req, res) => {
         object.markrates = user.markrates
         response.push(object)
     })
-    res.render('leaderboard', response)
+    res.render('leaderboard', { response: response })
 })
 
-router.get('/profile', async (req, res) => {
+router.get('/profile', async(req, res) => {
     let user = await User.findOne({ access_token: req.query.access_token })
     res.render('profile', {
         name: user.name,

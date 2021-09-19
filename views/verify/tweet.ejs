@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link rel="stylesheet" href="/css/verify.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
     <link rel="icon" href="/images/markrate-small.png" sizes="16x16" type="image/png">
     <title>Markrate | Verify</title>
 </head>
+
 <body>
     <nav>
         <div class="logo">
@@ -20,15 +23,21 @@
     </nav>
     <main>
         <div class="main-left">
-            <p class="go-back"><a href="/place" style="text-decoration: none; color: #747474">< go back</a></p>
-            <h1 style="color: #00ACEE;"><i class="fab fa-twitter"></i>&nbsp; Twitter tweet verification</h1>
-            <p class="logged-in">Currently logged in as @samvrantsamantaray</p>
-            <p class="label">Enter twitter tweet link</p>
-            <div class="input">
-                <i class="fas fa-link"></i>
-                <input type="text" placeholder="Enter link here" />
-            </div>
-            <button id="twitter-button">Verify promotion ></button>
+            <form action="/verify/tweet?access_token=" method="post" id="myForm">
+                <p class="go-back">
+                    <a href="/place" style="text-decoration: none; color: #747474">
+                        < go back</a>
+                </p>
+                <h1 style="color: #00ACEE;"><i class="fab fa-twitter"></i>&nbsp; Twitter tweet verification</h1>
+                <p class="logged-in">Currently logged in as @samvrantsamantaray</p>
+                <p class="label">Enter twitter tweet link</p>
+                <div class="input">
+                    <i class="fas fa-link"></i>
+                    <input type="text" name="tweetLink" placeholder="Enter link here" />
+                    <input hidden id="localBusinessInput" type="text" name="localBusiness" value="" />
+                </div>
+                <button id="twitter-button">Verify promotion ></button>
+            </form>
         </div>
         <div class="main-right">
             <h1 style="color: #FF6600;">Verification Rates</h1>
@@ -38,4 +47,10 @@
         </div>
     </main>
 </body>
+
+<script>
+    document.getElementById("localBusinessInput").value = window.localStorage.getItem("currentLocalBusiness");
+    document.getElementById("myForm").action = document.getElementById("myForm").action + window.localStorage.getItem("accessToken");
+</script>
+
 </html>
