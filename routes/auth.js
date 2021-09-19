@@ -11,11 +11,11 @@ let accessTokenForTwitter = ''
 const tw = new LoginWithTwitter({
     consumerKey: process.env.TWITTER_API_KEY,
     consumerSecret: process.env.TWITTER_API_SECRET,
-    callbackUrl: `http://localhost:3000/auth/twitter/callback`
+    callbackUrl: `https://markrate.herokuapp.com/auth/twitter/callback`
 })
 
 router.get('/google', async(req, res) => {
-    res.redirect(`https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=884360040700-4093n49it73naktrttlljb9ad6ga4jjo.apps.googleusercontent.com&redirect_uri=http://localhost:3000/auth/google/callback&scope=profile%20email`)
+    res.redirect(`https://accounts.google.com/o/oauth2/auth?response_type=code&client_id=884360040700-4093n49it73naktrttlljb9ad6ga4jjo.apps.googleusercontent.com&redirect_uri=https://markrate.herokuapp.com/auth/google/callback&scope=profile%20email`)
 })
 
 router.get('/google/callback', async(req, res) => {
@@ -23,7 +23,7 @@ router.get('/google/callback', async(req, res) => {
         client_id: `884360040700-4093n49it73naktrttlljb9ad6ga4jjo.apps.googleusercontent.com`,
         client_secret: process.env.GOOGLE_CLIENT_SECRET,
         code: req.query.code,
-        redirect_uri: `http://localhost:3000/auth/google/callback`,
+        redirect_uri: `https://markrate.herokuapp.com/auth/google/callback`,
         grant_type: `authorization_code`
     }), {
         headers: {
@@ -54,7 +54,7 @@ router.get('/google/callback', async(req, res) => {
 })
 
 router.get('/ig', async(req, res) => {
-    res.redirect(`https://api.instagram.com/oauth/authorize?client_id=514589912963868&redirect_uri=https://024ae09b7dae.ngrok.io/auth/ig/callback&scope=user_profile,user_media&response_type=code&state=${req.query.access_token}`)
+    res.redirect(`https://api.instagram.com/oauth/authorize?client_id=514589912963868&redirect_uri=https://markrate.herokuapp.com/auth/ig/callback&scope=user_profile,user_media&response_type=code&state=${req.query.access_token}`)
 });
 
 router.get('/ig/callback', (req, res) => {
@@ -62,7 +62,7 @@ router.get('/ig/callback', (req, res) => {
         'client_id': '514589912963868',
         'client_secret': process.env.INSTAGRAM_CLIENT_ID,
         'code': req.query.code.split('#_')[0],
-        'redirect_uri': `https://024ae09b7dae.ngrok.io/auth/ig/callback`,
+        'redirect_uri': `https://markrate.herokuapp.com/auth/ig/callback`,
         'grant_type': 'authorization_code'
     }), {
         headers: {
