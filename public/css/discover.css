@@ -98,7 +98,7 @@ main .input input:focus {
     background: #FFFFFF;
     box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
-    height: 23.2vw;
+    height: 31vw;
     width: 17vw;
     margin-right: 2.5vw;
     margin-bottom: 2.5vw;
@@ -106,7 +106,7 @@ main .input input:focus {
 
 .card-image {
     width: 17vw;
-    height: auto;
+    height: 10vw;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 }

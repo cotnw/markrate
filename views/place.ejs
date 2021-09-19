@@ -11,7 +11,7 @@
         <div class="logo">
             <img src="https://cdn.discordapp.com/attachments/870661503487991869/871308102329307146/unknown.png">
         </div>
-        <span class="current-location"><i class="fas fa-map-marker-alt"></i>&nbsp; Gurugram, Haryana</span>
+        <span class="current-location"><i class="fas fa-map-marker-alt"></i>&nbsp; <%= place %></span>
         <div class="right">
             <a href="/discover" id="active"><i class="far fa-compass"></i>&nbsp; Discover</a>
             <a href="/leaderboard"><i class="fas fa-trophy"></i>&nbsp; Leaderboard</a>
@@ -20,20 +20,20 @@
     </nav>
     <main>
         <div class="main-left">
-            <img src="https://cdn.discordapp.com/attachments/870661503487991869/871122702851784774/unknown.png" class="card-image">
+            <img src="<%= image %>" class="card-image">
             <div class="card-content">
-                <p class="name">Baba Ka Dhaba</p>
-                <p class="address">Gurugram, Haryana</p>
-                <button><i class="fas fa-map-marker-alt"></i>&nbsp; Show location</button>
+                <p class="name" id="bizname"><%= data.name %></p>
+                <p class="address"><%= data.formatted_address %></p>
+                <a href="<%= data.url %>" target="_blank"><button><i class="fas fa-map-marker-alt"></i>&nbsp; Show location</button></a>
                 <p class="header">Reviews</p>
                 <p class="review">
-                    <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span style="color: #FF6600;margin-left: 0vw;">(21)</span>
+                    <%= data.rating %> stars <span style="color: #FF6600;margin-left: 0vw;">(<%= data.reviews.length %>)</span>
                 </p>
                 <p class="header" style="margin-top: 1.5vw;">Contact</p>
-                <p class="phone-number"><i class="fas fa-phone-alt"></i>&nbsp;&nbsp; +91 9810675988</p>
-                <p class="phone-number"><i class="fas fa-globe"></i>&nbsp;&nbsp; https://babakabhadba.com</p>
+                <p class="phone-number"><i class="fas fa-phone-alt"></i>&nbsp;&nbsp; <%= data.formatted_phone_number %></p>
+                <p class="phone-number"><i class="fas fa-globe"></i>&nbsp;&nbsp; <a href="<%= data.website %>" target="_blank"><%= data.website %></a></p>
                 <p class="header" style="margin-top: 1.5vw;">Types</p>
-                <p class="phone-number">Point of Interest, Establishment</p>
+                <p class="phone-number"><%= data.types[0] %>, <%= data.types[1] %></p>
             </div>
         </div>
         <div class="main-right">
@@ -44,5 +44,10 @@
             <a href="/verify/tweet"><button><i class="fab fa-twitter"></i>&nbsp; Twitter Tweets</button></a>
         </div>
     </main>
+    <script>
+        window.onload = () => {
+            window.localStorage.setItem('currentLocalBusiness', document.getElementById('bizname').innerHTML)
+        }
+    </script>
 </body>
 </html>

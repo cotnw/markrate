@@ -11,7 +11,7 @@
         <div class="logo">
             <img src="https://cdn.discordapp.com/attachments/870661503487991869/871308102329307146/unknown.png">
         </div>
-        <span class="current-location"><i class="fas fa-map-marker-alt"></i>&nbsp; Gurugram, Haryana</span>
+        <span class="current-location"><i class="fas fa-map-marker-alt"></i>&nbsp; <span id="place">Gurugram, Haryana</span>
         <div class="right">
             <a href="/discover"><i class="far fa-compass"></i>&nbsp; Discover</a>
             <a href="/leaderboard"><i class="fas fa-trophy"></i>&nbsp; Leaderboard</a>
@@ -25,17 +25,17 @@
             <h3>Display Name</h3>
             <div class="input">
                 <i class="fas fa-user"></i>
-                <input type="text" placeholder="Anshul Saha" disabled/>
+                <input type="text" placeholder="Anshul Saha" disabled id="fullName"/>
             </div>
             <h3>Email Address</h3>
             <div class="input">
                 <i class="fas fa-envelope"></i>
-                <input type="text" placeholder="anshulsaha15@gmail.com" disabled/>
+                <input type="text" placeholder="anshulsaha15@gmail.com" disabled id="email"/>
             </div>
             <h3>Saved Location</h3>
             <div class="input">
                 <i class="fas fa-map-marker-alt"></i>
-                <input type="text" placeholder="Gurugram, Haryana" disabled/>
+                <input type="text" placeholder="Gurugram, Haryana" disabled id="location"/>
             </div>
             <h3>Socials</h3>
             <div class="social">
@@ -43,14 +43,14 @@
                     <i class="fab fa-instagram"></i>
                     <p>Instagram</p>
                 </div>
-                <button class="insta-connect-button">Connect</button>
+                <a id="insta-auth-href"><button class="insta-connect-button">Connect</button></a>
             </div>
             <div class="social">
                 <div class="namelogo" id="twitter-social-icon">
                     <i class="fab fa-twitter"></i>
-                    <p>Twitter</p>
+                    <p id="twitter-social-icon">Twitter</p>
                 </div>
-                <button class="twitter-connect-button" style="margin-left: 10.8vw;">Connect</button>
+                <a id="twitter-auth-href"><button class="twitter-connect-button" style="margin-left: 10.8vw;">Connect</button></a>
             </div>
             <div class="social">
                 <div class="namelogo">
@@ -68,12 +68,13 @@
             </div>
         </div>
         <div class="main-right">
-            <button class="logout-button">Logout</button>
+            <a href="/login"><button class="logout-button">Logout</button></a>
             <h3>Your statistics</h3>
             <div class="input">
-                <p><span style="font-weight: bold;">Markrates earned</span> &nbsp; <img src="/images/markrate-small.png"></img> &nbsp; <span style="font-weight: bold;">54</span> <button id="connected">Redeem</button></p>
+                <p><span style="font-weight: bold;">Markrates earned</span> &nbsp; <img src="/images/markrate-small.png"></img> &nbsp; <span style="font-weight: bold;" id="markrates">54</span> <button id="connected">Redeem</button></p>
             </div>
         </div>
     </main>
+    <script src="/js/profile.js"></script>
 </body>
 </html>

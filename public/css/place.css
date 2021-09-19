@@ -66,7 +66,7 @@ main {
 
 .main-left {
     width: 60%;
-    height: 40vw;
+    height: 45vw;
     background: #FFFFFF;
     box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
@@ -74,7 +74,7 @@ main {
 
 .card-image {
     width: 100%;
-    height: auto;
+    height: 12vw;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 }
@@ -144,6 +144,7 @@ main {
     font-size: 0.9vw;
     color: #747474;
     margin-top: -0.5vw;
+    word-break: break-all;
 }
 
 .main-right {
