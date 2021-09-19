@@ -43,7 +43,8 @@ router.get('/google/callback', async(req, res) => {
                     email: profileRes.data.email,
                     google_id: profileRes.data.sub,
                     access_token: response.data.access_token,
-                    pfp_url: profileRes.data.picture
+                    pfp_url: profileRes.data.picture,
+                    markrates: 0
                 })
                 await newUser.save()
                 res.redirect(`/setup?accessToken=${response.data.access_token}`)
@@ -103,6 +104,9 @@ router.get('/twitter/callback', async(req, res) => {
             console.log(err)
         }
         globalTokenSecret = ''
+        console.log(accessTokenForTwitter)
+        let findUser = await User.findOne({ access_token: accessTokenForTwitter })
+        console.log(findUser)
         let findUser = User.findOne({ access_token: accessTokenForTwitter })
         findUser.connections.twitter = {
             access_token: user.userToken,

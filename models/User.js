@@ -31,7 +31,8 @@ const UserSchema = new mongoose.Schema({
     },
     markrates: {
         type: Number,
-        required: true
+        required: true,
+        default: 0,
     },
     connections: {
         type: Object,
@@ -39,6 +40,14 @@ const UserSchema = new mongoose.Schema({
             instagram: {},
             twitter: {}
         }
+    },
+    coords: {
+        type: String,
+        required: false,
+    },
+    address: {
+        type: String,
+        required: false,
     }
 })
 

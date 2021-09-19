@@ -11,7 +11,7 @@
         <div class="logo">
             <img src="https://cdn.discordapp.com/attachments/870661503487991869/871308102329307146/unknown.png">
         </div>
-        <span class="current-location"><i class="fas fa-map-marker-alt"></i>&nbsp; Gurugram, Haryana</span>
+        <span class="current-location"><i class="fas fa-map-marker-alt"></i>&nbsp; <%= place %></span>
         <div class="right">
             <a href="/discover" id="active"><i class="far fa-compass"></i>&nbsp; Discover</a>
             <a href="/leaderboard"><i class="fas fa-trophy"></i>&nbsp; Leaderboard</a>
@@ -24,36 +24,24 @@
             <input type="text" placeholder="Search for local stores, restaurants" />
         </div>
         <div class="cards">
-            <div class="card">
-                <img src="https://cdn.discordapp.com/attachments/870661503487991869/871122702851784774/unknown.png" class="card-image">
-                <div class="card-content">
-                    <p class="category">Snacks</p>
-                    <p class="name">Baba Ka Dhaba</p>
-                    <p class="address">Gurugram, Haryana</p>
-                    <p class="header">Reviews</p>
-                    <p class="review">
-                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span style="color: #FF6600;margin-left: 0vw;">(21)</span>
-                    </p>
-                    <p class="header">Status</p>
-                    <p class="status">Open</p>
-                    <button>View Page</button>
+            <% for (let i=0; i < data.length; i++) { %>
+                <div class="card">
+                    <img src="https://maps.googleapis.com/maps/api/place/photo?photoreference=<%= data[i].photos[0].photo_reference %>&key=<%= key %>" class="card-image">
+                    <div class="card-content">
+                        <p class="category">Snacks</p>
+                        <p class="name">Baba Ka Dhaba</p>
+                        <p class="address">Gurugram, Haryana</p>
+                        <p class="header">Reviews</p>
+                        <p class="review">
+                            <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span style="color: #FF6600;margin-left: 0vw;">(21)</span>
+                        </p>
+                        <p class="header">Status</p>
+                        <p class="status">Open</p>
+                        <button>View Page</button>
+                    </div>
                 </div>
-            </div>
-            <div class="card">
-                <img src="https://cdn.discordapp.com/attachments/870661503487991869/871122702851784774/unknown.png" class="card-image">
-                <div class="card-content">
-                    <p class="category">Snacks</p>
-                    <p class="name">Baba Ka Dhaba</p>
-                    <p class="address">Gurugram, Haryana</p>
-                    <p class="header">Reviews</p>
-                    <p class="review">
-                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> <span style="color: #FF6600;margin-left: 0vw;">(21)</span>
-                    </p>
-                    <p class="header">Status</p>
-                    <p class="status">Open</p>
-                    <button>View Page</button>
-                </div>
-            </div>
+            <% } %>
+            
             <div class="card">
                 <img src="https://cdn.discordapp.com/attachments/870661503487991869/871122702851784774/unknown.png" class="card-image">
                 <div class="card-content">

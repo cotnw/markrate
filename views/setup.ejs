@@ -4,6 +4,8 @@
     <link rel="stylesheet" href="/css/setup.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="/images/markrate-small.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <title>Markrate | Setup</title>
 </head>
 <body>
@@ -22,23 +24,23 @@
                 <p style="color: #747474;">Set up your Markrate account and help local business!</p>
                 <div class="location">
                     <p>Your location</p>
-                    <input type="text" placeholder="Mayfield Garden, Sector-51, Gugraon, Haryana">
+                    <input type="text" placeholder="Mayfield Garden, Sector-51, Gugraon, Haryana" id="location">
                 </div>
                 <div class="location">
                     <p>Link your socials</p>
                     <div class="social">
-                        <div class="namelogo">
+                        <div class="namelogo" id="insta-social-icon">
                             <i class="fab fa-instagram"></i>
                             <p>Instagram</p>
                         </div>
-                        <button class="insta-connect-button" id="connected">Connect</button>
+                        <a id="insta-auth-href"><button class="insta-connect-button">Connect</button></a>
                     </div>
                     <div class="social">
-                        <div class="namelogo">
+                        <div class="namelogo" id="twitter-social-icon">
                             <i class="fab fa-twitter"></i>
                             <p>Twitter</p>
                         </div>
-                        <button class="twitter-connect-button" style="margin-left: 10.8vw;">Connect</button>
+                        <a id="twitter-auth-href"><button class="twitter-connect-button" style="margin-left: 10.8vw;">Connect</button></a>
                     </div>
                     <div class="social">
                         <div class="namelogo">

@@ -4,6 +4,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     overflow: hidden;
+    font-family: 'Poppins';
 }
 
 .left {
@@ -99,18 +100,17 @@ main p {
     display: flex;
     flex-wrap: wrap;
     margin-top: 0.7vw;
+    color: #747474;
 }
 
 .namelogo i {
     width: 0.5vw;
     height: auto;
-    color: #747474;
     font-size: 1.3vw;
 }
 
 .namelogo p {
     font-size: 1vw;
-    color: #747474;
     margin-left: 2vw;
     font-family: 'Poppins';
     margin-top: -0.2vw;
