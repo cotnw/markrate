@@ -34,7 +34,7 @@ document.getElementById('setup-form').addEventListener('submit', (e) => {
         return notyf.error('Please connect atleast one social.')
     }
 
-    fetch(`http://open.mapquestapi.com/geocoding/v1/address?key=crii51WOVIIPfThLN5u02uDuhTajcIAv&location=${location}`)
+    fetch(`https://open.mapquestapi.com/geocoding/v1/address?key=crii51WOVIIPfThLN5u02uDuhTajcIAv&location=${location}`)
     .then(async (res) => {
         const resp = await res.json()
         const address = resp.results[0].providedLocation.location
